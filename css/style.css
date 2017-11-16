@@ -1,0 +1,620 @@
+/* ---Responsive styling for Louisville Youth Group website redesign--- */
+
+
+/* RESETS */
+
+@import url("normalize.css");
+
+
+/* FONT IMPORTS */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+
+
+/* GLOBAL STYLES */
+
+* {
+  /* Include padding/margin/borders in calculations */
+  box-sizing: border-box;
+}
+
+/* Clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  font-size: 100%;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* VARIABLES */
+
+
+/* GENERIC STYLING */
+
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-family: 'Roboto Slab', sans-serif;
+  color: white;
+  font-size: 2.125em;
+  display: inline-block;
+}
+
+h2 {
+  font-family: 'Roboto Slab', sans-serif;
+  color: white;
+  font-size: 1.125em;
+  font-weight: lighter;
+  display: inline;
+}
+
+h1, h2 {
+  border-bottom: 3px solid rgba(249,243,62,1);
+}
+
+h3 {
+  font-family: 'Roboto Slab', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 1.5em;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 1.125em
+}
+
+h6, p {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 1.05em;
+  line-height: 1.25em;
+}
+
+.on-colored-background {
+  color: white;
+}
+
+
+
+
+/* Link Styling */
+a {
+  color: rgba(249,243,62,1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* PAGE STRUCTURE AND LAYOUT */
+
+header {
+    background-color: white;
+    border-bottom: opx;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    top: 0;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 2.5%;
+}
+
+    header > div#logo {
+      line-height: 0;
+      flex: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 50%;
+    }
+
+      header > div#logo > a {
+        line-height: 0;
+        display: inline-block;
+      }
+
+      header > div#logo > a > img {
+        max-height: 80px;
+      }
+
+    header > div#navToggle {
+      transition: 300ms all ease;
+      flex: 2;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      header > div#navToggle > a {
+        color: rgba(60,25,101,1);
+        font-size: 0.85em;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 300ms all ease;
+      }
+
+            .menuUp {
+              background-color: white;
+              color: rgba(60,25,101,1);
+            }
+
+            .menuDown {
+              background-color: rgba(60,25,101,1);
+              color: white;
+            }
+
+            header > div#navToggle.menuDown > a {
+              color: white;
+            }
+
+            .menuOpen > nav {
+              position: fixed;
+              z-index: 2;
+              top: 80px;
+              right: 0;
+              display: block;
+              width: 60%;
+            }
+
+    header > nav {
+      display: none;
+      background-color: white;
+      flex: 1;
+      transform: 300ms all ease;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+        header nav > ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+
+            header nav > ul > li {
+              border-bottom: 1px dotted rgba(0,0,0,.1);
+              position: relative;
+            }
+
+                header nav > ul > li:last-of-type {
+                  border-bottom: none;
+                }
+
+                header nav > ul > li > a {
+                  display: block;
+                  color: rgba(0,0,0,.65);
+                  font-family: 'Roboto Slab', serif;
+                  font-weight: 700;
+                  padding: 1.125rem;
+                  text-decoration: none;
+                  transition: 250ms all ease;
+                }
+
+                    header > nav > ul > li:hover > a {
+                      background-color: rgba(60,25,101,1);
+                      color: white;
+                      text-decoration: none;
+                    }
+
+.hero-section {
+  background-image: url('../img/header_cover_image_1.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.gradient-feather {
+  width: 100%;
+  padding: 0% 10% 5%;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.hero-section h1 {
+  padding-top: 100%;
+}
+
+.darkpurple,
+.mediumpurple,
+.lightpurple,
+.donate-call-to-action,
+.homepage-contact-form {
+  padding: 8%;
+}
+
+.impact-statistics {
+  text-align: center;
+  display: block;
+  padding: 10%;
+}
+
+.impact-statistics h1 {
+  color: rgba(60,25,101,1);
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: block;
+}
+
+.picture-block {
+  min-height: 260px;
+  background-size: cover;
+}
+
+.darkpurple {
+  background-color: rgba(60,25,101,1);
+}
+
+.mediumpurple {
+  background-color: rgba(137,120,166,1);
+}
+
+.lightpurple {
+  background-color: rgba(201,186,219,1);
+}
+
+.link-on-purple {
+  display: inline-block;
+  padding-top: 10%;
+  text-decoration: underline;
+}
+
+.link-on-white {
+  display: inline-block;
+  padding-top: 10%;
+  text-decoration: underline;
+}
+
+.donate-call-to-action {
+  text-align: center;
+}
+
+.fa-chevron-right {
+  padding-left: 10px;
+}
+
+.fa-calendar {
+  padding-right: 5px;
+}
+
+.donate-call-to-action h1 {
+  color: rgba(60,25,101,1);
+  border-bottom: 0px solid rgba(249,243,62,1);
+}
+
+.donate-call-to-action button {
+  padding: 5% 5%;
+  margin-bottom: 12.5%;
+  background-color: rgba(249,243,62,1);
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+  display: inline-block;
+}
+
+.donate-call-to-action button:hover {
+  background-color: rgba(237,231,59,1);
+}
+
+.homepage-contact-form {
+  background-color: white;
+  margin-bottom: 5%
+}
+
+.homepage-contact-form-wrapper {
+  background-color: whitesmoke;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+.homepage-contact-form h1 {
+  color: black;
+  font-size: 1.5em;
+  border-bottom: 3px solid rgba(249,243,62,1);
+  display: inline-block;
+}
+
+.homepage-newsletter-subscribe h1 {
+    display: inline;
+    font-size: 1.75em;
+}
+
+.homepage-contact-form > .homepage-contact-form-wrapper > #contact-form-submit, .homepage-newsletter-subscribe > #newsletter-subscribe-submit {
+  min-width: 48px;
+  min-height: 48px;
+  background-color: rgba(249,243,62,1);
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+  display: inline-block;
+  margin-bottom: 0.25em
+}
+
+footer {
+  background-color: rgba(60,25,101,1);
+  padding: 2.5% 10%;
+}
+
+/* COMPONENTS */
+
+/* Form styling */
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+}
+
+input, textarea {
+  font: 1em 'Roboto', sans-serif;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #999;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: rgba(60,25,101,1);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(60,25,101,1);
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+  min-height: 5em;
+  margin-bottom: 1em;
+}
+
+/* PLUGINS */
+
+
+/* MEDIA QUERIES & RESPONSIVE RULES */
+
+/* Medium screens */
+@media screen and (min-width: 800px) {
+    /*body { background-color: red; }*/
+
+    header > div#navToggle {
+        display: none;
+    }
+
+    header {
+        background-color: white;
+        border-bottom: 0px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-flow: row nowrap;
+        position: fixed;
+        width: 100%;
+        max-height: 150px;
+        justify-content: space-between;
+    }
+
+      header > div#logo {
+        background-color: white;
+        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
+      }
+
+      header > nav {
+          display: inline-block;
+          background-color: white;
+          flex: 2;
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: 50%;
+          padding-right: 3rem;
+          box-shadow: 0px 0px 0px rgba(0,0,0,0);
+        }
+
+        header > nav > ul {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+        }
+
+            header nav > ul > li {
+              border-bottom: none;
+            }
+
+                header nav > ul > li > a {
+                  height: 80px;
+                  line-height: 80px;
+                  padding-top: 0;
+                  padding-bottom: 0;
+                }
+
+
+    /*flex styling*/
+    .gradient-feather {
+      padding: 0 20% 2.5%;
+    }
+
+    .hero-section h1 {
+      padding-top: 30%;
+      font-size: 6em;
+    }
+
+    .hero-section p {
+      font-size: 2em;
+    }
+
+    .impact-statistics {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+    .impact-statistics p {
+      font-size: 1.5em;
+      padding: 0 5% 0;
+    }
+
+    .stats-wrapper-1 {
+      order: 1;
+      flex-grow: 1;
+    }
+
+    .stats-wrapper-2 {
+      order: 2;
+      flex-grow: 1;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
+    .content-container {
+      order: 1;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 50%;
+    }
+
+    .picture-block {
+      order: 2;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      width: 100%;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .form-container {
+      order: 2;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      margin-left: 5%;
+    }
+
+    .content-container h2 {
+      font-size: 2em;
+    }
+
+    .content-container p {
+      font-size: 1.5em;
+    }
+
+    .content-container a {
+      font-size: 1.75em;
+    }
+
+    .get-involved h2 {
+      font-size: 2em;
+    }
+
+    .get-involved p {
+      font-size: 1.5em;
+    }
+
+    .get-involved a {
+      font-size: 1.75em;
+    }
+
+    .donate-call-to-action h1 {
+      font-size: 3em;
+    }
+
+    .donate-call-to-action button {
+      padding: 2.5%;
+      margin-bottom: 2.5%;
+      font-size: 2.5em;
+      font-weight: bolder;
+      color: white;
+      border-radius: 10px;
+      border-style: none;
+      display: inline-block;
+    }
+
+    .homepage-contact-form h1 {
+      font-size: 3.5em;
+    }
+
+    .homepage-contact-form p {
+      font-size: 2em;
+    }
+}
+
+
+
+
+
+
+/* PRINT STYLES */

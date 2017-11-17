@@ -55,7 +55,7 @@ function validate() {
 
 /* animated text in hero section */
 var typed = new Typed('.animated-header', {
-  strings: [" are loved", " are worthy", " do belong", " have value", " matter", " are valid"],
+  strings: ["You are loved", "You are worthy", "You do belong", "You have value", "You matter", "You are valid"],
   typeSpeed: 85,
   backSpeed: 50,
   // smartBackspace: true,
